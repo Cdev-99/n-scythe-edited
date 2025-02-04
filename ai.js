@@ -235,7 +235,7 @@
         const totalSteps = m.cycle;
         const advantage = totalReward - ucbScore(output[chosenActionIndex], totalSteps, movementIndex);
         updateWeightsAndBiases(desiredOutput, output, hiddenLayer, advantage);
-        console.log(totalReward + "," + movementReward + "," + loss + "," + desiredOutput + "," + output);
+        /* console.log(totalReward + "," + movementReward + "," + loss + "," + desiredOutput + "," + output); */
         input.up = desiredOutput[0] > 0.5;
         input.down = desiredOutput[1] > 0.5;
         input.left = desiredOutput[2] > 0.5;
@@ -243,7 +243,7 @@
         input.field = desiredOutput[4] > 0.5;
         input.fire = desiredOutput[5] > 0.5;  
         input.angle = output[6] * Math.PI * 2;
-        m.look = function () {return input.look}
+        m.look = function () {return input.angle}
     }
     function saveWeightsAndBiases() {
         const savedData = {
