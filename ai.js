@@ -243,7 +243,9 @@
         input.field = desiredOutput[4] > 0.5;
         input.fire = desiredOutput[5] > 0.5;  
         input.angle = output[6] * Math.PI * 2 * 180;
-        m.look = function () {return input.angle}
+        m.look = function () {return input.angle};
+        m.lookDefault = function () {return input.angle};
+        
     }
     function saveWeightsAndBiases() {
         const savedData = {
