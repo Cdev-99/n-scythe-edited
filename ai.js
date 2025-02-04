@@ -242,7 +242,7 @@
         input.right = desiredOutput[3] > 0.5;
         input.field = desiredOutput[4] > 0.5;
         input.fire = desiredOutput[5] > 0.5;  
-        input.angle = output[6] * Math.PI * 2 * 180;
+        input.angle = output[6] * Math.PI * 2;
         m.look = function () {
             m.angle = input.angle
             return input.angle};
